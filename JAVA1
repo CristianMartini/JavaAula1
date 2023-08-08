@@ -1,0 +1,30 @@
+package javaaula1;
+
+import java.util.Scanner;
+        
+public class JavaAula1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        Scanner entrada = new Scanner(System.in);
+        Scanner entradaStr = new Scanner(System.in);
+        
+        System.out.println("Digite a idade");
+        int idade = entrada.nextInt();
+        
+        System.out.println("Digite o seu peso: ");
+        double peso = entrada.nextDouble();
+       
+        System.out.println("Digite o seu nome: ");
+        String nome = entradaStr.nextLine();
+        
+        System.out.println("Digite o seu sexo: ");
+        char sexo = entrada.next().charAt(0);
+        
+        System.out.println("idade: "+ idade +"\nPeso: " + peso +"\nNome: " + nome + "\nSexo: " + sexo);
+    }
+    
+}
