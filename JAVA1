@@ -28,3 +28,202 @@ public class JavaAula1 {
     }
     
 }
+
+JAVA AULA 1
+
+Devemos somente ter uma classe e uma main para cada projeto.
+O comando System.out.println(“Hello World”); (printLN pula uma linha, o print sem o LN não pula uma linha).
+
+import.java.util.Scanner; = Importar uma biblioteca. Se você somente escrever SCANNER no código, ele aparecerá em cima para completar o código.
+
+Scanner entrada = new Scanner();
+O Scanner da um nome que você quiser, o NEW recebe pelo SCANNER.
+OUT = saída padrão
+New = selecionar a entrada padrão, que por “padrão” do PC, é o teclado (System.in);
+Int idade = entrada.nextInt(); = para receber a idade
+String texto = entrada.nextLine();
+Double = número quebrado
+\n = para pular linha no print da tela.
+
+Para que possamos receber caracteres primeiro do que as informações de números e demais variáveis, existem duas maneiras para rodar isso, são elas: Colocando a String primeiro do que todas as demais verificações OU criar um novo Scanner no começo, ai você consegue colocar a String em qualquer lugar. (Scanner entradaStr = new Scanner(System.in);
+
+Utilize a System.out.println("Digite o seu sexo: ");
+        char sexo = entrada.next().charAt(0); para que o vetor se inicie em zero (chatAt(0);).
+
+Atribuições de variável:
+
+Int idade2 = 75;
+Double altura = 1.85
+String gênero = “Masculino”;
+Char sexo2 = ‘m’;
+Boolean teste = true;
+Exercícios:
+
+1.	Faça um algoritmo para imprimir em cada linha: o seu nome completo, o seu RA e o seu curso.
+R:
+
+package javaaula1exercicios;
+
+import java.util.Scanner;
+
+public class JavaAula1Exercicios {
+
+
+    public static void main(String[] args) {
+        
+      Scanner entrada = new Scanner(System.in);
+      Scanner entradaStr = new Scanner(System.in);
+      
+        System.out.println("Aluno, digite o seu nome completo: ");
+        String nome = entradaStr.nextLine();
+        
+        System.out.println("Aluno, agora digite o número do seu RA: ");
+        int ra = entrada.nextInt();
+        
+        System.out.println("Por último, digite o seu curso: ");
+        String curso = entradaStr.nextLine();
+        
+        System.out.println("Nome: " + nome + "\nRA: " + ra + "\nCurso: " + curso);
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.	Faça um algoritmo para imprimir a sua idade, o seu peso e o seu sexo. Indicar o sexo como sendo: F – Feminino ou M – Masculino;
+R:
+package javaaula1exercicios2;
+
+import java.util.Scanner;
+
+public class JavaAula1Exercicios2 {
+
+
+    public static void main(String[] args) {
+       
+        Scanner entrada = new Scanner(System.in);
+        Scanner entradaStr = new Scanner(System.in);
+        
+        System.out.println("Digite a sua idade: ");
+        int idade = entrada.nextInt();
+        
+        System.out.println("Digite o seu peso: ");
+        double peso = entrada.nextDouble();
+        
+        System.out.println("Digite o seu sexo: ");
+        char sexo = entrada.next().charAt(0);
+        
+        System.out.println("Idade: " + idade + "\nPeso: " + peso + "\nSexo: " + sexo);
+        
+    }
+    
+}
+
+
+3.	Faça um algoritmo para apresentar o resultado lógico das seguintes expressões:
+((120 – 30) = (3 x 30))
+( não ( (20 módulo 4) = 1) ou (9 != 9)
+( (5 módulo 2/2) > 3)
+( a = A )
+
+R:
+package javaaula1exercicios3;
+
+import java.util.Scanner;
+
+public class JavaAula1Exercicios3 {
+
+
+    public static void main(String[] args) {
+
+        Scanner expressoes = new Scanner(System.in);
+        Scanner expressoesStr = new Scanner (System.in);
+        
+        System.out.println((120 - 30) == (3 * 30));
+        System.out.println( ! ((20 % 4) == 1) || (9 != 9));
+        System.out.println( (5 % 2 / 2) > 3);
+        System.out.println('a' == 'A');
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4.	Faça um algoritmo para apresentar o cálculo da média aritmética das seguintes notas: 8.0, 7.5, 4.5 e 9.0
+R: 
+package javaaula1exercicios4;
+
+import java.util.Scanner;
+
+public class JavaAula1Exercicios4 {
+
+
+    public static void main(String[] args) {
+        Scanner notas = new Scanner(System.in);
+        Scanner notasStr = new Scanner (System.in);
+        
+        System.out.println("Digite a primeira nota: ");
+        double nota1 = notas.nextDouble();
+        
+        System.out.println("Digite a segunda nota: ");
+        double nota2 = notas.nextDouble();
+        
+        System.out.println("Digite a terceira nota: ");
+        double nota3 = notas.nextDouble();
+        
+        System.out.println("Digite a quarta nota: ");
+        double nota4 = notas.nextDouble();
+        
+        System.out.println("Sua média é: " + (nota1 + nota2 + nota3 + nota4) / 4);
+    }
+    
+}
+
+5.	Construir um algoritmo e apresentar o cálculo da área de um quadrado de 350 m de lado.
+        R:
+package javaaula1exercicios5;
+
+import java.util.Scanner;
+
+
+public class JavaAula1Exercicios5 {
+
+
+    public static void main(String[] args) {
+        Scanner area = new Scanner(System.in);
+        
+        System.out.println(350 * 350);
+    }
+    
+}
