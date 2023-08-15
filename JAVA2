@@ -1,3 +1,233 @@
+JAVA AULA 2
+
+Declarar as idades primeiro:
+
+String nome1, nome2
+Int idade1, idade2
+
+==
 Faça um algoritmo que receba o nome e a idade de duas pessoas e em seguida diga qual é a mais velha.
 R:
+package java2exercicio1;
+
+import java.util.Scanner;
+
+public class Java2Exercicio1 {
+
+    public static void main(String[] args) {
+        
+        Scanner entrada = new Scanner(System.in);
+        Scanner entradaStr = new Scanner(System.in);
+        
+        System.out.println("Digite o seu nome da primeira pessoa");
+        String nome1 = entradaStr.nextLine();
+        
+        System.out.println("Digite o seu nome da segunda pessoa");
+        String nome2 = entradaStr.nextLine();
+        
+        System.out.println("Digite a idade da primeira pessoa");
+        int idade1 = entrada.nextInt();
+        
+        System.out.println("Digite a idade da segunda pessoa");
+        int idade2 = entrada.nextInt();
+        
+        if (idade1 > idade2) { 
+            System.out.println(nome1 + " é mais velho(a)");
+        } else {
+           System.out.println(nome2 + " é mais velho(a)");
+        }
+            
+       
+    }
+    
+}
+==
+
+1.	Faça um algoritmo que leia um número inteiro. Se o número for maior que 20, calcular e imprimir a metade dele.
+2.	2. Faça um algoritmo para ler um número inteiro. Verificar se o número está no intervalo entre 50 (inclusive) e 100 (inclusive), se estiver, imprimir “Pertence ao intervalo”, senão imprimir “Não pertence ao intervalo”.
+3.	Ler dois valores inteiros se forem iguais, mostrar “números iguais”, caso contrário, apresentar a diferença do maior pelo menor.
+4.	Ler dois números (ponto flutuante) e apresentá-los em ordem decrescente. Supor que não sejam iguais.
+5.	A empresa XSoftware concedeu um bônus de 20% do valor do salário a todos os funcionários com tempo de trabalho na empresa igual ou superior a cinco anos e de 10% aos demais funcionários. Faça um algoritmo que leia o salário e a quantidade de anos de casa de um funcionário, calcule e imprima o valor do bônus
+6.	Faça um algoritmo que receba a idade de uma pessoa e mostre se ela é maior de idade ou não
+7.	Faça um algoritmo que leia a altura e o sexo de uma pessoa, calcule e mostre seu peso ideal. Usar as fórmulas a seguir para calcular o peso ideal:
+- Para o sexo masculino: (72,7 * altura) – 58
+- Para o sexo feminino: (62,1 * altura) – 44,7
+8.	Faça um algoritmo que verifique a validade de uma senha fornecida pelo usuário. Sabendo que a senha é R10p5, imprimir a mensagem de acesso “acesso concedido” ou “acesso negado”.
+ - Para comparar duas strings utilize a função equals()
+	Senha.equals(“R10p5”)
+
+
+1 R: 
+package java2exercicio2;
+import java.util.Scanner;
+public class Java2Exercicio2 {
+
+    public static void main(String[] args) {
+     Scanner entrada = new Scanner (System.in);
+     
+     System.out.println("Digite o seu número. Ele precisa ser um número inteiro:");
+     int num = entrada.nextInt();
+     
+     if (num >= 20) {
+         System.out.println("Seu número é " + num / 2);
+     
+    } else {
+         System.out.println("Seu número é " + num);
+     }
+    
+    }}
+
+==
+
+
+2 R: 
+package java2exercicio3;
+import java.util.Scanner;  
+public class Java2Exercicio3 {
+    public static void main(String[] args) {
+        Scanner inteiro = new Scanner (System.in);
+        
+        System.out.println("Digite o seu número. Ele precisa ser inteiro:");
+        int num = inteiro.nextInt();
+        
+        if (num >= 50 && num <= 100) {
+            System.out.println("Pertence ao intervalo");
+           } else {
+            System.out.println("Não pertence ao intervalo");
+        }
+    
+}
+}
+
+
+
+3 R:  package java2exercicio4;
+import java.util.Scanner;
+public class Java2Exercicio4 {
+
+    public static void main(String[] args) {
+        Scanner inteiro = new Scanner (System.in);
+        
+        System.out.println("Digite o primeiro número");
+        int num1 = inteiro.nextInt();
+        
+        System.out.println("Digite o seu segundo número");
+        int num2 = inteiro.nextInt();
+        
+        if (num1 == num2) {
+            System.out.println("Os números são iguais");
+        } else {
+            System.out.println("Os números são diferentes, resultado: " + (num1 - num2));
+        }
+    }
+
+
+4 R: package java2exercicio5;
+import java.util.Scanner;
+public class Java2Exercicio5 {
+
+    public static void main(String[] args) {
+        Scanner decres = new Scanner (System.in);
+        
+        System.out.println("Digite o primeiro número");
+        double num1 = decres.nextDouble();
+        
+        System.out.println("Digite o segundo número");
+        double num2 = decres.nextDouble();
+        
+        if (num1 > num2){
+            System.out.println(num1);
+            System.out.println(num2);
+        } else {
+            System.out.println(num2);
+            System.out.println(num1);
+        }
+    }
+}
+
+
+5 R:
+package java2exercicio6;
+import java.util.Scanner;
+public class Java2Exercicio6 {
+    public static void main(String[] args) {
+        Scanner salario = new Scanner (System.in);
+        Scanner tempoStr = new Scanner (System.in);
+        
+        System.out.println("Digite o seu salário");
+        double salario1 = salario.nextDouble();
+        
+        System.out.println("Digite quantos anos de casa na XSoftware");
+        double tempoCasa = tempoStr.nextDouble();
+        
+        if (tempoCasa >= 5){
+            System.out.println("O seu salário deve ter um bônus de 20%, ficando: " + (salario1 * 0.2 + salario1));
+        } else {
+            System.out.println("O seu salário deve ter um bônus de 10%, ficando: " + (salario1 * 0.1 + salario1));
+        }
+    }
+}
+
+
+6 R:  package java2exercicio7;
+import java.util.Scanner;
+public class Java2Exercicio7 {
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner (System.in);
+        
+        System.out.println("Digite a sua idade");
+        int idade = entrada.nextInt();
+        
+        if (idade >= 18) {
+            System.out.println("Você é maior de idade e tem: " + idade);
+        } else {
+            System.out.println("Você é menor de idade e tem: " + idade);
+        }
+    }
+    
+}
+
+
+
+7 R: package java2exercicio8;
+import java.util.Scanner;
+public class Java2Exercicio8 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner (System.in);
+        Scanner entradaStr = new Scanner (System.in);
+        
+        System.out.println("Digite a sua altura");
+        double altura = entrada.nextDouble();
+        
+        System.out.println("Digite o seu sexo");
+        char sexo = entradaStr.next().charAt(0);
+        
+        if (sexo == 'm') {
+            System.out.println("O seu peso ideal é: " + (72.7 * altura - 58));
+        } else
+                System.out.println("O seu peso ideal é: " + (62.1 * altura - 44.7));
+    }
+}
+
+
+8 R: package java2exercicio9;
+import java.util.Scanner;
+public class Java2Exercicio9 {
+
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+        
+        System.out.println("Digite a sua senha");
+        String senha = entrada.nextLine();
+                
+      if (senha == 'R10p5'){
+        System.out.println("Senha correta");      
+    } else {
+            System.out.println("Senha incorreta");
+            }
+    }
+    
+}
 
