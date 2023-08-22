@@ -1,0 +1,108 @@
+Ex 1. Obtenha um número digitado pelo usuário e repira a operação de multiplicar ele por três (imprimindo o valor) até que ele seja maior do que 100.
+Ex.: se o usuário digita 5, deveremos observar na tela a seguinte sequência: 5 15 45 135
+R:
+package javaaula2exercicio1;
+
+import java.util.Scanner;
+
+public class JavaAula2Exercicio1 {
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        
+        System.out.println("Digite o seu número: ");
+        int num = entrada.nextInt();
+        
+        while (num <= 100) {
+            num = num * 3;
+            System.out.println("O seu número é: " + num);
+        }
+    }
+    
+}
+
+Ex 2. Ler um número inteiro n. Escrever a soma de todos os números de 1 até n.
+for(int i = 0; i < 10; i++){}
+R:
+package javaaula3exercicio2;
+
+import java.util.Scanner;
+
+public class JavaAula3Exercicio2 {
+
+    
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner (System.in);
+        
+        System.out.println("Digite o seu número: ");
+        int num = entrada.nextInt();
+        
+        int numero = 0;
+        
+        for (int i = 0; i <= num ; i++){
+            numero += i;
+        }  
+        System.out.println(numero);
+    } 
+    
+}
+
+
+Ex 3. Declare um vetor de 10 posições e o preencha com os 10 primeiros números impares e o escreva.
+R:
+
+package javaaula3exercicio3;
+
+import java.util.Scanner;
+
+public class JavaAula3Exercicio3 {
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner (System.in);
+        
+    int[] vetor = new int[10];
+    
+        int i = 0, slot = 0;
+        
+        do{
+            if(i % 2 == 1){
+                vetor[slot] = i;
+                slot++;
+            }
+            i++;
+        }while(slot < 10);
+        
+        i = 0;
+
+        for(; i < vetor.length; i++){
+            System.out.println(vetor[i]);
+        }
+    }
+        }
+
+Ex 4. Leia um vetor de 20 posições e em seguida um valor X qualquer. Seu programa deverá fazer uma busca do valor de X no vetor lido e informar a posição em que foi encontrado ou se não foi encontrado.
+R:
+package javaaula3exercicio4;
+
+import java.util.Scanner;
+
+public class JavaAula3Exercicio4 {
+    
+    public static void main(String[] args) {
+      Scanner entrada = new Scanner(System.in);
+           
+    int numero, vetor [] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+    
+    System.out.println("Digite o seu número ");
+    numero = entrada.nextInt();
+
+    if (numero == vetor.length) {
+        System.out.println("O número está dentro do vetor: " + numero);
+        
+    } else {
+        System.out.println("O número está fora do vetor: " + numero);
+    }
+  }
+}
+(INCOMPLETO)
+
